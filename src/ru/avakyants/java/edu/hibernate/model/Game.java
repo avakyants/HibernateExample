@@ -2,7 +2,6 @@ package ru.avakyants.java.edu.hibernate.model;
 
 import javax.persistence.*;
 
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="tmp_game")
