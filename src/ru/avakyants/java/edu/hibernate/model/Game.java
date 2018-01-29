@@ -11,7 +11,7 @@ public class Game {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
-	private String id;
+	private long id;
 	
 	@Column(name="name", nullable = false)
 	private String name;
@@ -20,11 +20,11 @@ public class Game {
 	@JoinColumn(name="tournament")
 	private Tournament tournament;
 	
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	

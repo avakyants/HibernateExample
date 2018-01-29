@@ -8,7 +8,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://t14.ru:3306/wwwt14ru_avakyants?useSSL=false</property>
     <property name="hibernate.connection.username">t14_avakyants</property>
-    <property name="hibernate.connection.password">xoo7Zaix</property>
+    <property name="hibernate.connection.password">aujae3Ye</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="show_sql">true</property>
     
