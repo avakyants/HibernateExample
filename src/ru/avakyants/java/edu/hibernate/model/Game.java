@@ -16,8 +16,14 @@ public class Game {
 	private String name;
 	
 	@ManyToOne
-	@JoinColumn(name="tournament")
+	@JoinColumn(name="tournament", nullable = true)
 	private Tournament tournament;
+	
+	@Column(name="score_home")
+	private short scoreHome = 0;
+	
+	@Column(name="score_visitor")
+	private short scoreVisitor = 0;
 	
 	public long getId() {
 		return id;
@@ -41,6 +47,22 @@ public class Game {
 	
 	public void setTournament(Tournament tournament) {
 		this.tournament = tournament;
+	}
+
+	public short getScoreHome() {
+		return scoreHome;
+	}
+
+	public void setScoreHome(short scoreHome) {
+		this.scoreHome = scoreHome;
+	}
+
+	public short getScoreVisitor() {
+		return scoreVisitor;
+	}
+
+	public void setScoreVisitor(short scoreVisitor) {
+		this.scoreVisitor = scoreVisitor;
 	}
 
 }

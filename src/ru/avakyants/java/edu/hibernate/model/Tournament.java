@@ -20,6 +20,13 @@ public class Tournament {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "tournament")
 	private List<Game> games = new ArrayList<>();
 	
+	@PreRemove
+	private void preRemove() {
+	    for (Game g : games) {
+	        g.setTournament(null);
+	    }
+	}
+	
 	public long getId() {
 		return id;
 	}
