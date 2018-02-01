@@ -1,5 +1,7 @@
 package ru.avakyants.java.edu.hibernate.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.*;
 
 
@@ -24,6 +26,9 @@ public class Game {
 	
 	@Column(name="score_visitor")
 	private short scoreVisitor = 0;
+	
+	@Column(name="date_time")
+	private LocalDateTime dateTime = null;
 	
 	public long getId() {
 		return id;
@@ -63,6 +68,14 @@ public class Game {
 
 	public void setScoreVisitor(short scoreVisitor) {
 		this.scoreVisitor = scoreVisitor;
+	}
+
+	public LocalDateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(LocalDateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 
 }
