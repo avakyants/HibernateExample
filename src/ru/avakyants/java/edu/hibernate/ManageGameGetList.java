@@ -24,11 +24,11 @@ public class ManageGameGetList {
 		//criteria.from(Game.class);
 		Root<Game> rootGame = criteria.from(Game.class);
 		//criteria.where(builder.gt(rootGame.get("id"), 1L));
-		criteria.where(builder.equal(rootGame.get("name"), "CSKA - KHIMKI"));
+		criteria.where(builder.equal(builder.lower(rootGame.get("name")), "cska - khimki"));
 		
 		List<Game> games = session.createQuery(criteria).getResultList();
 		
-		games.forEach((g)->{ g.setScoreHome((short)17); session.merge(g);});
+		games.forEach((g)->{ g.setScoreHome((short)5); session.merge(g);});
 		tx.commit();
 		System.out.println(games.size());
 		
